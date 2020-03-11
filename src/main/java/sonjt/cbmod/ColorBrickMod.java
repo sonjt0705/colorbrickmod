@@ -34,7 +34,7 @@ public class ColorBrickMod
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        LOGGER.info("Got Game Settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
@@ -46,7 +46,7 @@ public class ColorBrickMod
 
     private void processIMC(final InterModProcessEvent event) {
         LOGGER.info(
-            "Got IMC {}",
+            "Got Inter Mod Communication {}",
             event.getIMCStream().map(m->m.getMessageSupplier().get()).collect(Collectors.toList())
         );
     }
@@ -84,16 +84,25 @@ public class ColorBrickMod
             new Item.Properties().group(colorBrickItems)
         ).setRegistryName(blueBricks.getRegistryName());
 
+        public static final Item blueBrick = new Item(
+            new Item.Properties().group(colorBrickItems)
+        ).setRegistryName(MODID, "blue_brick");
+
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             LOGGER.info("Item Registration");
-            event.getRegistry().registerAll(blueBricksItem);
+            event.getRegistry().registerAll(
+                blueBricksItem,
+                blueBrick
+            );
         }
 
         @SubscribeEvent
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             LOGGER.info("Block Registration");
-            event.getRegistry().registerAll(blueBricks);
+            event.getRegistry().registerAll(
+                blueBricks
+            );
         }
     }
 }
