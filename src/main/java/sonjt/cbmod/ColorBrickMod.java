@@ -1,7 +1,6 @@
 package sonjt.cbmod;
 
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.*;
 import net.minecraftforge.common.*;
 import net.minecraftforge.event.RegistryEvent;
@@ -13,6 +12,8 @@ import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.*;
 import java.util.stream.Collectors;
+import static sonjt.cbmod.item.Items.*;
+import static sonjt.cbmod.block.Blocks.blueBricks;
 
 @Mod(ColorBrickMod.MODID)
 public class ColorBrickMod
@@ -58,36 +59,6 @@ public class ColorBrickMod
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
-        public static final ItemGroup colorBrickItems = new ItemGroup("color_brick_items") {
-            @Override
-            public ItemStack createIcon() {
-                return new ItemStack(blueBricks);
-            }
-        };
-
-        public static final Block blueBricks = new Block(
-            Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 30.0f)
-        ) {
-            @Override
-            public ToolType getHarvestTool(BlockState state) {
-                return Blocks.BRICKS.getHarvestTool(state);
-            }
-
-            @Override
-            public int getHarvestLevel(BlockState state) {
-                return Blocks.BRICKS.getHarvestLevel(state);
-            }
-        }.setRegistryName(MODID, "blue_bricks");
-
-        public static final Item blueBricksItem = new BlockItem(
-            blueBricks,
-            new Item.Properties().group(colorBrickItems)
-        ).setRegistryName(blueBricks.getRegistryName());
-
-        public static final Item blueBrick = new Item(
-            new Item.Properties().group(colorBrickItems)
-        ).setRegistryName(MODID, "blue_brick");
-
         @SubscribeEvent
         public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
             LOGGER.info("Item Registration");
