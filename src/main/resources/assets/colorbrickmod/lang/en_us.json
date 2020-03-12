@@ -1,5 +1,7 @@
 {
-  "block.colorbrickmod.blue_bricks": "Blue Bricks Block",
   "itemGroup.color_brick_items": "Color Brick Items",
-  "item.colorbrickmod.blue_brick": "Blue Brick"
+  "block.colorbrickmod.blue_bricks": "Blue Bricks Block",
+  "block.colorbrickmod.green_bricks": "Green Bricks Block",
+  "item.colorbrickmod.blue_brick": "Blue Brick",
+  "item.colorbrickmod.green_brick": "Green Brick"
 }

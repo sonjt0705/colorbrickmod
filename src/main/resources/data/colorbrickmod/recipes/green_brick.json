@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#X#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brick"
+    },
+    "X": {
+      "item": "minecraft:green_dye"
+    }
+  },
+  "result": {
+    "item": "colorbrickmod:green_brick",
+    "count": 8
+  }
+}

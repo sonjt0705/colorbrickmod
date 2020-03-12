@@ -13,7 +13,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.*;
 import java.util.stream.Collectors;
 import static sonjt.cbmod.item.Items.*;
-import static sonjt.cbmod.block.Blocks.blueBricks;
+import static sonjt.cbmod.block.Blocks.*;
 
 @Mod(ColorBrickMod.MODID)
 public class ColorBrickMod
@@ -64,7 +64,9 @@ public class ColorBrickMod
             LOGGER.info("Item Registration");
             event.getRegistry().registerAll(
                 blueBricksItem,
-                blueBrick
+                blueBrick,
+                greenBricksItem,
+                greenBrick
             );
         }
 
@@ -72,7 +74,8 @@ public class ColorBrickMod
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             LOGGER.info("Block Registration");
             event.getRegistry().registerAll(
-                blueBricks
+                blueBricks,
+                greenBricks
             );
         }
     }
