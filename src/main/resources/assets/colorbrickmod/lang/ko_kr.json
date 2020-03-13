@@ -2,6 +2,8 @@
   "itemGroup.color_brick_items": "색깔 벽돌 아이템들",
   "block.colorbrickmod.blue_bricks": "파란 벽돌 블록",
   "block.colorbrickmod.green_bricks": "초록 벽돌 블록",
+  "block.colorbrickmod.red_bricks": "빨간 벽돌 블록",
   "item.colorbrickmod.blue_brick": "파란 벽돌",
-  "item.colorbrickmod.green_brick": "초록 벽돌"
+  "item.colorbrickmod.green_brick": "초록 벽돌",
+  "item.colorbrickmod.red_brick": "빨간 벽돌"
 }

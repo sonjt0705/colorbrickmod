@@ -66,7 +66,9 @@ public class ColorBrickMod
                 blueBricksItem,
                 blueBrick,
                 greenBricksItem,
-                greenBrick
+                greenBrick,
+                redBricksItem,
+                redBrick
             );
         }
 
@@ -75,7 +77,8 @@ public class ColorBrickMod
             LOGGER.info("Block Registration");
             event.getRegistry().registerAll(
                 blueBricks,
-                greenBricks
+                greenBricks,
+                redBricks
             );
         }
     }

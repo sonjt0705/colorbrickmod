@@ -34,4 +34,18 @@ public class Blocks {
             return BRICKS.getHarvestLevel(state);
         }
     }.setRegistryName(MODID, "green_bricks");
+
+    public static final Block redBricks = new Block(
+        Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 30.0f)
+    ) {
+        @Override
+        public ToolType getHarvestTool(BlockState state) {
+            return BRICKS.getHarvestTool(state);
+        }
+
+        @Override
+        public int getHarvestLevel(BlockState state) {
+            return BRICKS.getHarvestLevel(state);
+        }
+    }.setRegistryName(MODID, "red_bricks");
 }
