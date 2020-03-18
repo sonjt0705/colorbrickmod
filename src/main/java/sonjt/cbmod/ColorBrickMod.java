@@ -68,7 +68,9 @@ public class ColorBrickMod
                 greenBricksItem,
                 greenBrick,
                 redBricksItem,
-                redBrick
+                redBrick,
+                yellowBricksItem,
+                yellowBrick
             );
         }
 
@@ -78,7 +80,8 @@ public class ColorBrickMod
             event.getRegistry().registerAll(
                 blueBricks,
                 greenBricks,
-                redBricks
+                redBricks,
+                yellowBricks
             );
         }
     }

@@ -3,7 +3,9 @@
   "block.colorbrickmod.blue_bricks": "Blue Bricks Block",
   "block.colorbrickmod.green_bricks": "Green Bricks Block",
   "block.colorbrickmod.red_bricks": "Red Bricks Block",
+  "block.colorbrickmod.yellow_bricks": "Yellow Bricks Block",
   "item.colorbrickmod.blue_brick": "Blue Brick",
   "item.colorbrickmod.green_brick": "Green Brick",
-  "item.colorbrickmod.red_brick": "Red Brick"
+  "item.colorbrickmod.red_brick": "Red Brick",
+  "item.colorbrickmod.yellow_brick": "Yellow Brick"
 }

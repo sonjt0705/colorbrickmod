@@ -33,4 +33,13 @@ public class Items {
     public static final Item redBrick = new Item(
         new Item.Properties().group(ItemGroups.colorBrickItems)
     ).setRegistryName(MODID, "red_brick");
+
+    public static final Item yellowBricksItem = new BlockItem(
+        yellowBricks,
+        new Item.Properties().group(ItemGroups.colorBrickItems)
+    ).setRegistryName(Objects.requireNonNull(yellowBricks.getRegistryName()));
+
+    public static final Item yellowBrick = new Item(
+        new Item.Properties().group(ItemGroups.colorBrickItems)
+    ).setRegistryName(MODID, "yellow_brick");
 }
