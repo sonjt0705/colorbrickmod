@@ -1,16 +1,40 @@
-bin
+# gradle
+
+.gradle/
+build/
+out/
+classes/
+
+# eclipse
+
 *.launch
-.settings
-.metadata
-.classpath
-.project
-out
+
+# idea
+
+.idea/
+*.iml
 *.ipr
 *.iws
-*.iml
-.idea
-build
-.gradle
-eclipse
-run
-forge*changelog.txt
+
+# vscode
+
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macos
+
+*.DS_Store
+
+# fabric
+
+run/
+
+# java
+
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
